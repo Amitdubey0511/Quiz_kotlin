@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
                     "Please Enter your Name",Toast.LENGTH_LONG).show()
             }else{
                 val intent =Intent(this, QuestionActivity::class.java)
+               intent.putExtra(constants.USER_NAME,etName.text.toString())
                 startActivity(intent)
                 finish()
            }
